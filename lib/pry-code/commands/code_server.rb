@@ -26,13 +26,13 @@ class PryCode::CodeServer < Pry::ClassCommand
             set port: 9009
 
             get '/completion/:q' do
-            content_type 'text/json'
-            q = params[:q]
-            result = Pry::InputCompleter.new(Readline).call q
-            # result.map! do |e|
-            #     e.gsub!(q, "")
-            # end
-            JSON.generate({result: result})
+              content_type 'text/json'
+              q = params[:q]
+              result = Pry::InputCompleter.new(Readline).call q
+              # result.map! do |e|
+              #     e.gsub!(q, "")
+              # end
+              JSON.generate({result: result})
             end
             run!
         end
