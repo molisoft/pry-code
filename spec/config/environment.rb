@@ -2,7 +2,7 @@ require 'rails'
 require 'rails/all'
 require 'active_support/core_ext'
 
-require 'pry-rails'
+require 'pry-code'
 
 # Initialize our test app
 
